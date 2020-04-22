@@ -2,12 +2,19 @@ package com.colegio.app.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "notas")
 public class Nota {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_curso")
+	private int idCurso;
 	
 	@Column(name = "nota_parcial")
 	private String notaParcial;
@@ -15,8 +22,7 @@ public class Nota {
 	private String notaFinal;
 	
 	private String practicas;
-	@Column(name = "id_curso")
-	private int idCurso;
+	
 	
 	public int getIdCurso() {
 		return idCurso;

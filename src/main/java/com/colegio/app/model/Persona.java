@@ -23,7 +23,7 @@ public class Persona {
 	@Column(name = "fec_nac")
 	private Date fecNac;
 	private String especialidad;
-	private String imagen;
+	//private String imagen;
 	private String tipo;
 	private String dni;
 	@Column(name = "perfil_id_perfil")
@@ -65,13 +65,7 @@ public class Persona {
 	}
 	public void setEspecialidad(String especialidad) {
 		this.especialidad = especialidad;
-	}
-	public String getImagen() {
-		return imagen;
-	}
-	public void setImagen(String imagen) {
-		this.imagen = imagen;
-	}
+	} 
 	public String getTipo() {
 		return tipo;
 	}
@@ -93,9 +87,10 @@ public class Persona {
 	@Override
 	public String toString() {
 		return "Persona [idPersona=" + idPersona + ", nombres=" + nombres + ", apellidos=" + apellidos + ", genero="
-				+ genero + ", fecNac=" + fecNac + ", especialidad=" + especialidad + ", imagen=" + imagen + ", tipo="
-				+ tipo + ", dni=" + dni + ", idPerfil=" + idPerfil + "]";
+				+ genero + ", fecNac=" + fecNac + ", especialidad=" + especialidad + ", tipo=" + tipo + ", dni=" + dni
+				+ ", idPerfil=" + idPerfil + "]";
 	}
+	 
 	
 	
 	

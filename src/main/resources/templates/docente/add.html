@@ -1,0 +1,69 @@
+<!--begin::Modal-->
+
+<div th:fragment="modal-agregar" class="modal-dialog modal-lg"
+	role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Agregar Docente</h5>
+			<button type="button" class="close" data-dismiss="modal"
+				aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div class="form-row">
+					<div class="col-md-3 mb-3">
+						<label>Nombre</label> <input class="form-control d_nombres"
+							name="nombres" type="text" placeholder=""
+							onKeyPress="return soloLetras(event);">
+					</div>
+					<div class="col-md-3 mb-3">
+						<label>Apellido</label> <input class="form-control d_apellidos"
+							name="apellidos" type="text" placeholder=""
+							onKeyPress="return soloLetras(event);">
+					</div>
+					<div class="col-md-3 mb-3">
+						<label>Genero</label> <select class="selectpicker"
+							data-live-search="true" name="genero" id="d_genero"
+							data-width="100%">
+							<option data-tokens="ketchup mustard" value="" disabled selected>Seleccionar</option>
+							<option>Masculino</option>
+							<option>Femenino</option>
+						</select>
+					</div>
+					<div class="col-md-3 mb-3">
+						<label>Fecha de Nacimiento</label> <input
+							class="form-control d_nacimiento" name="fec_nac" type="date">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="col-md-6 mb-4">
+						<label>Especialidad</label> <input
+							class="form-control d_especialidad" name="especialidad"
+							type="text" placeholder="" onKeyPress="return soloLetras(event);">
+					</div> 
+					<div class="col-md-6 mb-4">
+						<label>DNI</label> <input class="form-control d_dni" name="dni"
+							type="text" placeholder="">
+					</div>
+
+				</div>
+				<div class="form-row">
+					<div class="col-md-6 mb-6">
+						<label>Usuario</label> <input class="form-control d_usuario"
+							name="usuario" type="text" placeholder="">
+					</div>
+
+					<div class="col-md-6 mb-6">
+						<label>Contrase&ntilde;a</label> <input class="form-control d_password"
+							name="password" type="password" placeholder="">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer" align="center">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary btnGuardarDocente">Guardar</button>
+		</div>
+	</div>
+</div>
+<!--end::Modal-->

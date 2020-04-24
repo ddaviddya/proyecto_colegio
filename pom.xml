@@ -64,6 +64,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- REQUERIDO PARA TRABAJAR CON SPRING SECURITY | MD5 PASSWORD -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
